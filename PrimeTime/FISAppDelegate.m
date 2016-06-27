@@ -7,15 +7,24 @@
 //
 
 #import "FISAppDelegate.h"
+#import "FISPrimeTimeTableViewController.h"
 
 @implementation FISAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UIViewController *myViewController=[[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil]
+                                         instantiateViewControllerWithIdentifier:@"firstView"];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:myViewController];
+    self.window.rootViewController = nav;
+
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+    
     return YES;
 }
 
