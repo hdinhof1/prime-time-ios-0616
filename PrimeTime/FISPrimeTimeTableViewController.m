@@ -125,7 +125,7 @@
             }
 
         }
-        i++; 
+        i += 2;
     }
     //NSLog(@"primeList is %@", self.primeList);
     
